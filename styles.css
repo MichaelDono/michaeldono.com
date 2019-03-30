@@ -1,0 +1,161 @@
+body, div, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(https://www.michaeldono.com/background.svg);
+    background-repeat: no-repeat;
+    background-size: 21000px 15000px;
+    height: 100vh;
+}
+
+/* sidebar styling */
+
+#sidebar.col-2 {
+    background-color: #202e5f;
+    color: #FFFFFF;
+    padding: 2em 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+    box-shadow: 0.2em 0 0.9em #1b13636e;
+    display: none;
+}
+
+.row > .col-10 {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: #FFFFFF;
+    justify-content: center;
+    
+    padding: 0 2em;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.col-10 > div {
+    margin: 0 auto;
+}
+
+.col-10 h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4em;
+    line-height: 1.05em;
+}
+
+.container-fluid p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+@media (min-width: 1200px) {
+    .row > .col-10 {
+        padding: 0 12em;
+        height: 100%;
+        
+    }
+
+    #sidebar.col-2 { 
+        display: block;
+    }
+
+    .col-10 h1 {
+        font-size: 8em;
+    }
+
+    .col-10 p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .row > .col-10 {
+        flex: 0 0 100%;
+        min-width: 100%;
+        
+    }
+}
+
+
+
+
+
+#sidebar > .header {
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 300;
+    padding-bottom: 0.5em;
+    text-shadow: 0.02em 0.02em 0.1em #8f89b9;
+}
+
+#sidebar .subheader {
+    font-size: 0.8em;
+}
+
+#sidebar > .divider {
+    background-color: #505897;
+    height: 1px;
+    margin: 0.6em -1.5em;
+}
+
+.projects > .listing {
+    padding: 0.3em 1em;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    font-weight: 300;
+}
+
+.listing > a, 
+.listing > a:visited,
+.listing > a:link,
+.listing > a:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2em 0;
+}
+
+.listing > a:active, 
+.listing > a:hover {
+    color: #d4ddf8;
+}
+
+.listing > a.this > div {
+    font-weight: 400;
+    border-left: 1px solid #bcc3ce;
+    margin-left: -0.33em;
+    padding-left: 0.33em;
+}
+
+.tourDescription {
+    padding: 0.8em 1em;
+    font-size: 1.1em;
+    line-height: 1.25em;
+    flex-grow: 1;
+}
+
+.tourDescription > span {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.2em 0;
+    display: inline-block;
+    text-indent: 1em;
+
+}
+
+.row {
+    height: 100%;
+}
+
+
+.container-fluid {
+    color: #fafafa;
+    height: 100vh;
+}
