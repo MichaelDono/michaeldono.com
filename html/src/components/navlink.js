@@ -2,10 +2,8 @@ import { Link } from "gatsby"
 import React from "react"
 import Nav from 'react-bootstrap/Nav'
 
+import styles from './navlink.module.css'
+
 export default (props) => (
-    <Nav.Link>
-        <Link to={props.linkTo}>
-            <h1>{props.children}</h1>
-        </Link>
-    </Nav.Link>
+    <Link {...props} activeClassName={styles.active} className={styles.link} to={props.linkTo}>{props.children}</Link>
   )

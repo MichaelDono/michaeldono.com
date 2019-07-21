@@ -1,0 +1,36 @@
+.container {
+    /* color: #FFFFFF; */
+
+}
+
+.row {
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+    .row {
+        height: 100vh;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 12em;
+        height: 100vh;
+        /* color: #FFFFFF; */
+        display: flex;
+        flex-direction: column;
+        user-select: none;
+        vertical-align: middle;
+        justify-content: center;
+    }
+
+    .container h1 {
+        font-size: 8em;
+    }
+
+    .row {
+        height: 100vh;
+    }
+}
