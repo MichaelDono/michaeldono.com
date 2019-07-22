@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import Nav from 'react-bootstrap/Nav'
 
 import styles from './navlink.module.css'
 

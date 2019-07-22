@@ -11,10 +11,10 @@ import '../components/fonts.css'
 
 
 const IndexPage = () => (
-    <Container fluid="true">
+    <Container fluid="true" className={styles.container}>
       <Row className={styles.row}>
         <NavBar />
-        <Col lg="9" xl="10" className={styles.container}>
+        <Col lg="9" xl="10" className={styles.contentContainer}>
           <div>
             <h1>Michael Dono</h1>
             <p>Programmer, Student and Former Child.</p>

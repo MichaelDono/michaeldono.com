@@ -1,6 +1,12 @@
-.container {
-    /* color: #FFFFFF; */
+.contentContainer {
+    
+    color: #FFFFFF;
+}
 
+.container {
+    background-image: url(https://www.michaeldono.com/background.svg);
+    background-repeat: no-repeat;
+    background-size: 21000px 15000px;
 }
 
 .row {
@@ -15,10 +21,10 @@
 
 
 @media (min-width: 1200px) {
-    .container {
+    .contentContainer {
         padding: 0 12em;
         height: 100vh;
-        /* color: #FFFFFF; */
+        
         display: flex;
         flex-direction: column;
         user-select: none;

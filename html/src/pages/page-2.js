@@ -11,7 +11,7 @@ const SecondPage = () => (
   <Container fluid="true">
   <Row>
     <NavBar />
-    <Col md="10">
+    <Col lg="9" xl="10">
       <div>
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>

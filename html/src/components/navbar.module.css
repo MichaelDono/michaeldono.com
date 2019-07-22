@@ -6,13 +6,23 @@
     box-shadow: 0.2em 0 0.9em #1b13636e;
 }
 
+.header, .header:visited {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.header:hover {
+    text-decoration: none;
+}
+
 .navbar {
     align-items: flex-start;
 }
 
 @media (min-width: 992px) {
-    .responsiveNav {
-        height: 100%;
+    .container {
+        min-height: 100vh;
     }
 
     .header {
