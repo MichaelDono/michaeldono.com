@@ -3,10 +3,11 @@
     color: #FFFFFF;
 }
 
-.container {
-    background-image: url(https://www.michaeldono.com/background.svg);
-    background-repeat: no-repeat;
-    background-size: 21000px 15000px;
+.contentContainer div ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.33em;
+    list-style: none;
+    padding-left: 0;
 }
 
 .row {
@@ -32,7 +33,7 @@
         justify-content: center;
     }
 
-    .container h1 {
+    .header {
         font-size: 8em;
     }
 
