@@ -1,0 +1,33 @@
+.container {
+    padding: 2em 10em;
+    /* display: flex; */
+}
+
+.content {
+    background-color: #f2f1f0;
+    color: #16161d;
+}
+
+.container h1 {
+    font-family: 'Raleway', monospace;
+    font-size: 4em;
+    line-height: 1.05em;
+}
+
+.poiImage {
+    box-shadow: 0.1em 0.1em 0.9em #1b13636e;
+    width: 50%;
+    float: left;
+    margin: 0 1em 1em 1em;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    flex: 8 0 auto;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-top: 1em;
+}

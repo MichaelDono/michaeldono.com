@@ -12,22 +12,22 @@ import '../components/fonts.css'
 
 
 const IndexPage = () => (
-    <Container fluid="true" className={containerStyles.container}>
-      <Row className={styles.row}>
-        <NavBar />
-        <Col lg="9" xl="10" className={styles.contentContainer}>
-          <div>
-            <h1 className={styles.header}>Michael Dono</h1>
-            <ul>
-              <li>Computer Science Undergraduate at Newcastle. </li>
-              <li>Intelligent Infrastucture at Network Rail.</li>
-              <li>Former Child.</li>
-            </ul>
-          </div>
-            
-        </Col>
-      </Row>
-    </Container>
+  <Container fluid="true" className={containerStyles.container}>
+    <Row className={styles.row}>
+      <NavBar />
+      <Col lg="9" xl="10" className={styles.contentContainer}>
+        <div>
+          <h1 className={styles.header}>Michael Dono</h1>
+          <ul>
+            <li>Computer Science Undergraduate at Newcastle. </li>
+            <li>Intelligent Infrastucture at Network Rail.</li>
+            <li>Former Child.</li>
+          </ul>
+        </div>
+          
+      </Col>
+    </Row>
+  </Container>
 
 )
 

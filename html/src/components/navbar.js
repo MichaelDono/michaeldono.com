@@ -17,7 +17,7 @@ export default () => (
             <Navbar.Collapse>
                 <Nav className="flex-lg-column">
                     <Nav.Link as={NavLink} linkTo="/" eventKey="1">Home</Nav.Link>
-                    <Nav.Link as={NavLink} linkTo="/page-2" eventKey="2">Newcastle Quayside Tour</Nav.Link>
+                    <Nav.Link as={NavLink} linkTo="/tour" eventKey="2">Newcastle Quayside Tour</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
