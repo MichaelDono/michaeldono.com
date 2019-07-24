@@ -1,6 +1,9 @@
 .container {
     padding: 2em 10em;
-    /* display: flex; */
+}
+
+.container > h1 {
+    color: #FFFFFF;
 }
 
 .content {
@@ -8,7 +11,7 @@
     color: #16161d;
 }
 
-.container h1 {
+.container > h1 {
     font-family: 'Raleway', monospace;
     font-size: 4em;
     line-height: 1.05em;

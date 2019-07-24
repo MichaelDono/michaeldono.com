@@ -139,7 +139,6 @@ export class MapContainer extends Component {
                 {url:"https://www.michaeldono.com/mentors/tour/png/poi8.png", scaledSize:new props.google.maps.Size(18,18)},
                 {url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", scaledSize:new props.google.maps.Size(18,18)
             }],
-            selectedPlace: {},
             activeMarker: {},
             showingInfoWindow: false
         }
@@ -197,16 +196,14 @@ export class MapContainer extends Component {
   }
 
   onMarkerClick = (props, marker) => {
-      console.log(this)
     this.setState({
-      selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
     });
   }
 
   onMapClicked = () => {
-    // if (this.state.showingInfoWindow)
+    if (this.state.showingInfoWindow)
       this.setState({
         activeMarker: null,
         showingInfoWindow: false
@@ -215,6 +212,8 @@ export class MapContainer extends Component {
 
 
   render() {
+    const data = this.props.data;
+
     return (
       <Map google={this.props.google} 
         zoom={15}
@@ -229,7 +228,7 @@ export class MapContainer extends Component {
         mapTypeControl={false}
         streetViewControl={false}
         gestureHandling="greedy"
-        zoomControl={false}
+        // zoomControl={false}
         styles={[
             {
                 "featureType": "administrative.locality",
@@ -355,33 +354,130 @@ export class MapContainer extends Component {
             strokeOpacity={0.75}
             strokeWeight={6} />
 
-        <Marker // centralStation
-            name="Dolores park"
+        { data && data.map(marker => (
+            <Marker
+                position={marker.position}
+                icon={ {
+                    scaledSize:new this.props.google.maps.Size(marker.icon.size[0], marker.icon.size[1]),
+                    url:marker.icon.url
+                }} /> 
+            ))
+        }
+{/* 
+        <Marker // Gateshead
+            position={{lat: 54.962207, lng: -1.604320}}
+            icon={this.state.metroIcon}
+            onClick={this.onMarkerClick} />
+
+            <InfoWindow  marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div className={styles.transit}>
+                    <h1>Gateshead Station</h1>
+                    <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
+                    <div className={styles.tocs}>
+                        <div className={styles.green}><p>Green Line</p></div>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
+                    </div>
+                </div>
+            </InfoWindow>
+
+        <Marker // Central Station
             position={{lat: 54.968492, lng: -1.617075}}
             icon={this.state.railIcon}
             onClick={this.onMarkerClick} />
             
-                <InfoWindow  marker={this.state.activeMarker}
+            <InfoWindow  marker={this.state.activeMarker}
                 visible={this.state.showingInfoWindow}>
-                <div>Hi!</div>
-                {/* <div class="transitLabel">
+                <div className={styles.transit}>
                     <h1>Central Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/rail.png"/>National Rail</h2>
-                    <div class="tocs midSection">
-                        <div class="toc lner"><p>LNER<p></div><br>
-                        <div class="toc tpe"><p>Transpennine Express<p></div><br>
-                        <div class="toc xc"><p>CrossCountry<p></div><br>
-                        <div class="toc northern"><p>Northern<p></div><br>
+                    <div className={styles.midSection}>
+                        <div className={styles.lner}>
+                            <p>LNER</p>
+                        </div>
+                        <div className={styles.tpe}>
+                            <p>Transpennine Express</p>
+                        </div>
+                        <div className={styles.xc}>
+                            <p>CrossCountry</p>
+                        </div>
+                        <div className={styles.northern}>
+                            <p>Northern</p>
+                        </div>
                     </div>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
-                    <div class="tocs">
-                        <div class="toc greenLine"><p>Green Line<p></div><br>
-                        <div class="toc yellowLine"><p>Yellow Line<p></div><br>
+                    <div className={styles.tocs}>
+                        <div className={styles.green}><p>Green Line</p></div>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
                     </div>
-                </div> */}
+                </div>
             </InfoWindow>
             
+        <Marker // Monument
+            position={{lat: 54.973847, lng: -1.613261}}
+            icon={this.state.metroIcon}
+            onClick={this.onMarkerClick} />
 
+            <InfoWindow  marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div className={styles.transit}>
+                    <h1>Monument Station</h1>
+                    <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
+                    <div className={styles.tocs}>
+                        <div className={styles.green}><p>Green Line</p></div>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
+                    </div>
+                </div>
+            </InfoWindow>
+
+        <Marker // Haymarket
+            position={{lat: 54.977481, lng: -1.613876}}
+            icon={this.state.metroIcon}
+            onClick={this.onMarkerClick} />
+
+            <InfoWindow  marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div className={styles.transit}>
+                    <h1>Haymarket Station</h1>
+                    <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
+                    <div className={styles.tocs}>
+                        <div className={styles.green}><p>Green Line</p></div>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
+                    </div>
+                </div>
+            </InfoWindow>
+
+        <Marker // St James
+            position={{lat: 54.974343, lng: -1.620630}}
+            icon={this.state.metroIcon}
+            onClick={this.onMarkerClick} />
+
+            <InfoWindow  marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div className={styles.transit}>
+                    <h1>St James Station</h1>
+                    <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
+                    <div className={styles.tocs}>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
+                    </div>
+                </div>
+            </InfoWindow>
+
+        <Marker // Manors
+            position={{lat: 54.973970, lng: -1.604811}}
+            icon={this.state.metroIcon}
+            onClick={this.onMarkerClick} />
+
+            <InfoWindow  marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}>
+                <div className={styles.transit}>
+                    <h1>Manors Station</h1>
+                    <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
+                    <div className={styles.tocs}>
+                        <div className={styles.yellow}><p>Yellow Line</p></div>
+                    </div>
+                </div>
+            </InfoWindow> */}
       </Map>
     );
   }
