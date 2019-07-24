@@ -112,18 +112,9 @@ export class MapContainer extends Component {
         super(props)
 
         this.state = {
-            originalCenter: {lat: 54.971907, lng: -1.614417},
             originalBounds: new props.google.maps.LatLngBounds(
                 {lat: 54.960907, lng: -1.625812},
                 {lat: 54.983063, lng: -1.604593}),
-            railIcon: {
-                url:"https://www.michaeldono.com/mentors/tour/png/rail_metro.png", 
-                scaledSize:new props.google.maps.Size(43,16)
-            },
-            metroIcon: {
-                url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
-                scaledSize:new props.google.maps.Size(16,16)
-            },
             originIcon: {
                 url:"https://www.michaeldono.com/mentors/tour/png/origin.png", 
                 scaledSize:new props.google.maps.Size(18,18)
@@ -140,7 +131,8 @@ export class MapContainer extends Component {
                 {url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", scaledSize:new props.google.maps.Size(18,18)
             }],
             activeMarker: {},
-            showingInfoWindow: false
+            showingInfoWindow: false,
+            infoVisibility: 0
         }
     }
     
@@ -198,179 +190,185 @@ export class MapContainer extends Component {
   onMarkerClick = (props, marker) => {
     this.setState({
       activeMarker: marker,
-      showingInfoWindow: true
+      infoVisibility: props.id
     });
   }
 
   onMapClicked = () => {
-    if (this.state.showingInfoWindow)
+    if (this.state.infoVisibility)
       this.setState({
         activeMarker: null,
-        showingInfoWindow: false
+        infoVisibility: 0
       });
   };
+
+  isInfoVisible = (id) => {
+      if (this.state.infoVisibility === 0 || this.state.infoVisibility != id) {
+          return false;
+      }
+      return true;
+  }
 
 
   render() {
     const data = this.props.data;
+    const google = this.props.google;
 
     return (
-      <Map google={this.props.google} 
-        zoom={15}
-        minZoom={14}
-        containerStyle={containerStyle}
-        className={styles.map}
-        style={style}
-        onClick={this.onMapClicked}
-        initialCenter={{ lat: 54.971907, lng: -1.614417}}
-        onDragend={this.centerMoved}
-        mapType="roadmap"
-        mapTypeControl={false}
-        streetViewControl={false}
-        gestureHandling="greedy"
-        // zoomControl={false}
-        styles={[
-            {
-                "featureType": "administrative.locality",
-                "stylers": [
+        <Map google={this.props.google} 
+            zoom={15}
+            minZoom={14}
+            containerStyle={containerStyle}
+            className={styles.map}
+            style={style}
+            onClick={this.onMapClicked}
+            initialCenter={{ lat: 54.971907, lng: -1.614417}}
+            onDragend={this.centerMoved}
+            mapType="roadmap"
+            mapTypeControl={false}
+            streetViewControl={false}
+            gestureHandling="greedy"
+            // zoomControl={false}
+            styles={[
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "administrative.neighborhood",
-                "stylers": [
+                    "featureType": "administrative.locality",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.attraction",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "administrative.neighborhood",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.business",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.attraction",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.government",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.business",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.medical",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.government",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.medical",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.place_of_worship",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.park",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.school",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.place_of_worship",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "poi.sports_complex",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.school",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels",
-                "stylers": [
+                    "featureType": "poi.sports_complex",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "simplified"
-                }
-                ]
-            },
-            {
-                "featureType": "transit.station.rail",
-                "elementType": "labels.text",
-                "stylers": [
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
-                }
-                ]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "labels.icon",
-                "stylers": [
+                    "featureType": "transit.station.rail",
+                    "elementType": "labels.text",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
                 {
-                    "visibility": "off"
+                    "featureType": "transit.station",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
                 }
-                ]
+            ]}
+            >
+
+            <Polyline 
+                path={polyline}
+                strokeColor="#FF0000"
+                strokeOpacity={0.75}
+                strokeWeight={6} />
+
+            { data && data.map(marker => (
+                <Marker
+                    id={marker.id}
+                    position={marker.position}
+                    // 
+                    onClick={this.onMarkerClick}
+                    icon={ {
+                        scaledSize:new google.maps.Size(marker.icon.size[0], marker.icon.size[1]),
+                        url:marker.icon.url
+                    }} /> 
+                ))
             }
-        ]}
-        >
 
-        <Polyline 
-            path={polyline}
-            strokeColor="#FF0000"
-            strokeOpacity={0.75}
-            strokeWeight={6} />
-
-        { data && data.map(marker => (
-            <Marker
-                position={marker.position}
-                icon={ {
-                    scaledSize:new this.props.google.maps.Size(marker.icon.size[0], marker.icon.size[1]),
-                    url:marker.icon.url
-                }} /> 
-            ))
-        }
-{/* 
-        <Marker // Gateshead
-            position={{lat: 54.962207, lng: -1.604320}}
-            icon={this.state.metroIcon}
-            onClick={this.onMarkerClick} />
-
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(1)}>
                 <div className={styles.transit}>
                     <h1>Gateshead Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
@@ -380,14 +378,9 @@ export class MapContainer extends Component {
                     </div>
                 </div>
             </InfoWindow>
-
-        <Marker // Central Station
-            position={{lat: 54.968492, lng: -1.617075}}
-            icon={this.state.railIcon}
-            onClick={this.onMarkerClick} />
             
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(2)}>
                 <div className={styles.transit}>
                     <h1>Central Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/rail.png"/>National Rail</h2>
@@ -412,14 +405,9 @@ export class MapContainer extends Component {
                     </div>
                 </div>
             </InfoWindow>
-            
-        <Marker // Monument
-            position={{lat: 54.973847, lng: -1.613261}}
-            icon={this.state.metroIcon}
-            onClick={this.onMarkerClick} />
 
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(3)}>
                 <div className={styles.transit}>
                     <h1>Monument Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
@@ -430,13 +418,8 @@ export class MapContainer extends Component {
                 </div>
             </InfoWindow>
 
-        <Marker // Haymarket
-            position={{lat: 54.977481, lng: -1.613876}}
-            icon={this.state.metroIcon}
-            onClick={this.onMarkerClick} />
-
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(4)}>
                 <div className={styles.transit}>
                     <h1>Haymarket Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
@@ -447,13 +430,8 @@ export class MapContainer extends Component {
                 </div>
             </InfoWindow>
 
-        <Marker // St James
-            position={{lat: 54.974343, lng: -1.620630}}
-            icon={this.state.metroIcon}
-            onClick={this.onMarkerClick} />
-
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(5)}>
                 <div className={styles.transit}>
                     <h1>St James Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
@@ -463,13 +441,8 @@ export class MapContainer extends Component {
                 </div>
             </InfoWindow>
 
-        <Marker // Manors
-            position={{lat: 54.973970, lng: -1.604811}}
-            icon={this.state.metroIcon}
-            onClick={this.onMarkerClick} />
-
-            <InfoWindow  marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}>
+            <InfoWindow marker={this.state.activeMarker}
+                visible={this.isInfoVisible(6)}>
                 <div className={styles.transit}>
                     <h1>Manors Station</h1>
                     <h2><img src="https://www.michaeldono.com/mentors/tour/png/metro.png"/>Metro</h2>
@@ -477,8 +450,8 @@ export class MapContainer extends Component {
                         <div className={styles.yellow}><p>Yellow Line</p></div>
                     </div>
                 </div>
-            </InfoWindow> */}
-      </Map>
+            </InfoWindow>
+        </Map>
     );
   }
 }

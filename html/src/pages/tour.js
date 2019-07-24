@@ -18,6 +18,7 @@ const markers = [
             size:[16,16]
         },
         position: {lat: 54.962207, lng: -1.604320},
+        id: 1
     },
     { // Central Station
         icon: {
@@ -25,6 +26,7 @@ const markers = [
             size:[43,16]
         },
         position: {lat: 54.968492, lng: -1.617075},
+        id: 2
     },
     { // Monument
         icon: {
@@ -32,6 +34,7 @@ const markers = [
             size:[16,16]
         },
         position: {lat: 54.973847, lng: -1.613261},
+        id: 3
     },
     { // Haymarket
         icon: {
@@ -39,6 +42,7 @@ const markers = [
             size:[16,16]
         },
         position: {lat: 54.977481, lng: -1.613876},
+        id: 4
     },
     { // St James
         icon: {
@@ -46,6 +50,7 @@ const markers = [
             size:[16,16]
         },
         position: {lat: 54.974343, lng: -1.620630},
+        id: 5
     },
     { // Manors
         icon: {
@@ -53,6 +58,7 @@ const markers = [
             size:[16,16]
         },
         position: {lat: 54.973970, lng: -1.604811},
+        id: 6
     },
   ];
 
