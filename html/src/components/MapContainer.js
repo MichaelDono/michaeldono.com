@@ -131,7 +131,6 @@ export class MapContainer extends Component {
                 {url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", scaledSize:new props.google.maps.Size(18,18)
             }],
             activeMarker: {},
-            showingInfoWindow: false,
             infoVisibility: 0
         }
     }
@@ -203,7 +202,7 @@ export class MapContainer extends Component {
   };
 
   isInfoVisible = (id) => {
-      if (this.state.infoVisibility === 0 || this.state.infoVisibility != id) {
+      if (this.state.infoVisibility === 0 || this.state.infoVisibility !== id) {
           return false;
       }
       return true;
@@ -358,7 +357,6 @@ export class MapContainer extends Component {
                 <Marker
                     id={marker.id}
                     position={marker.position}
-                    // 
                     onClick={this.onMarkerClick}
                     icon={ {
                         scaledSize:new google.maps.Size(marker.icon.size[0], marker.icon.size[1]),
