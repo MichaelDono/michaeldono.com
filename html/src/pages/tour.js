@@ -11,6 +11,79 @@ import styles from '../components/tour.module.css'
 import '../bootstrap/css/bootstrap.css'
 import '../components/fonts.css'
 
+const waypoints = [
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/origin.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.973513, lng: -1.625076}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi1.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.973536, lng: -1.619654}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi2.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.972544, lng: -1.617475}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi3.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.972810, lng: -1.615378}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi4.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.972680, lng: -1.612442}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi5.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.971232, lng: -1.614465}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi6.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.970867, lng: -1.615544}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi7.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.969903, lng: -1.611950}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi8.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.967380, lng: -1.607570}
+    },
+    {
+        icon: {
+            url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", 
+            size:[18,18]
+        },
+        position: {lat: 54.967395, lng: -1.605491}
+    },
+]
+
 const markers = [
     { // Gateshead
         icon: {
@@ -68,7 +141,7 @@ const Tour = () => (
     <NavBar />
     <Col lg="9" xl="10" className={styles.container}>
       <h1>Newcastle Quayside Tour</h1>
-      <MapContainer data={markers} />       
+      <MapContainer markers={markers} waypoints={waypoints}/>       
       <div className={styles.content}>
         <div id="poiContainer">
           <div className="poiRow">

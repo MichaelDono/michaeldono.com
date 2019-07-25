@@ -210,7 +210,8 @@ export class MapContainer extends Component {
 
 
   render() {
-    const data = this.props.data;
+    const markers = this.props.markers;
+    const waypoints = this.props.waypoints;
     const google = this.props.google;
 
     return (
@@ -353,7 +354,17 @@ export class MapContainer extends Component {
                 strokeOpacity={0.75}
                 strokeWeight={6} />
 
-            { data && data.map(marker => (
+            { waypoints && waypoints.map(waypoint => (
+                <Marker
+                    position={waypoint.position}
+                    icon={ {
+                        scaledSize:new google.maps.Size(waypoint.icon.size[0], waypoint.icon.size[1]),
+                        url:waypoint.icon.url
+                    }} /> 
+                ))
+            }
+
+            { markers && markers.map(marker => (
                 <Marker
                     id={marker.id}
                     position={marker.position}
