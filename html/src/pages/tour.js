@@ -14,70 +14,70 @@ import '../components/fonts.css'
 const waypoints = [
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/origin.png", 
+            url:"https://www.michaeldono.com/png/origin.png", 
             size:[18,18]
         },
         position: {lat: 54.973513, lng: -1.625076}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi1.png", 
+            url:"https://www.michaeldono.com/png/poi1.png", 
             size:[18,18]
         },
         position: {lat: 54.973536, lng: -1.619654}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi2.png", 
+            url:"https://www.michaeldono.com/png/poi2.png", 
             size:[18,18]
         },
         position: {lat: 54.972544, lng: -1.617475}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi3.png", 
+            url:"https://www.michaeldono.com/png/poi3.png", 
             size:[18,18]
         },
         position: {lat: 54.972810, lng: -1.615378}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi4.png", 
+            url:"https://www.michaeldono.com/png/poi4.png", 
             size:[18,18]
         },
         position: {lat: 54.972680, lng: -1.612442}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi5.png", 
+            url:"https://www.michaeldono.com/png/poi5.png", 
             size:[18,18]
         },
         position: {lat: 54.971232, lng: -1.614465}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi6.png", 
+            url:"https://www.michaeldono.com/png/poi6.png", 
             size:[18,18]
         },
         position: {lat: 54.970867, lng: -1.615544}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi7.png", 
+            url:"https://www.michaeldono.com/png/poi7.png", 
             size:[18,18]
         },
         position: {lat: 54.969903, lng: -1.611950}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi8.png", 
+            url:"https://www.michaeldono.com/png/poi8.png", 
             size:[18,18]
         },
         position: {lat: 54.967380, lng: -1.607570}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", 
+            url:"https://www.michaeldono.com/png/poi9.png", 
             size:[18,18]
         },
         position: {lat: 54.967395, lng: -1.605491}
@@ -87,7 +87,7 @@ const waypoints = [
 const markers = [
     { // Gateshead
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
+            url:"https://www.michaeldono.com/png/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.962207, lng: -1.604320},
@@ -95,7 +95,7 @@ const markers = [
     },
     { // Central Station
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/rail_metro.png", 
+            url:"https://www.michaeldono.com/png/rail_metro.png", 
             size:[43,16]
         },
         position: {lat: 54.968492, lng: -1.617075},
@@ -103,7 +103,7 @@ const markers = [
     },
     { // Monument
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
+            url:"https://www.michaeldono.com/png/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.973847, lng: -1.613261},
@@ -111,7 +111,7 @@ const markers = [
     },
     { // Haymarket
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
+            url:"https://www.michaeldono.com/png/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.977481, lng: -1.613876},
@@ -119,7 +119,7 @@ const markers = [
     },
     { // St James
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
+            url:"https://www.michaeldono.com/png/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.974343, lng: -1.620630},
@@ -127,7 +127,7 @@ const markers = [
     },
     { // Manors
         icon: {
-            url:"https://www.michaeldono.com/mentors/tour/png/metro.png", 
+            url:"https://www.michaeldono.com/png/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.973970, lng: -1.604811},
@@ -152,7 +152,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/tyne_brewery.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/tyne_brewery.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The USB is part of the Helix site. This area of Newcastle has a long history. The entire site used to be used to brew Newcastle Brown Ale, and before that it was a coal mine.
@@ -165,7 +165,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/sandman.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/sandman.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Learning and Teaching Centre opens Autumn 2019, providing more teaching spaces for the Computing and Business Schools. The Lumen, The Spark and National Innovation Centres
@@ -178,7 +178,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/helix.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/helix.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
           <span>The Helix site is a sustainable urban development - open, green space for education, research and living. Almost all buildings have gardens on their roofs 
@@ -196,7 +196,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/chinatown1.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/chinatown1.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Newcastle is one of only 5 cities in the UK to have a Chinatown. The first Chinese restaurant in Newcastle opened in 1949. The Chinese community in Tyne and Wear rapidly grew in the 1960s,
@@ -216,7 +216,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/TheGate.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/TheGate.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Many restaurants (including an around-the-world buffet), nightclubs, casino and cinema. 
@@ -234,7 +234,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/GraingerMarket.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/GraingerMarket.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Lots of food and ingredients on sale here - meats, fish, fruit and veg, sauces. Great pizza by the slice here as well! 
@@ -253,7 +253,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/greys-monument.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/greys-monument.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The monument was built in 1838 to celebrate the Great Reform Act of 1832.
@@ -271,7 +271,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/earl-grey.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/earl-grey.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>You can get tours of the Monument, where you climb the spiral staircase inside - 
@@ -283,7 +283,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/grey_street.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/grey_street.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Theatre Royal is the standout feature and shows ballets, contemporary dance, drama, musicals and opera. 
@@ -304,7 +304,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/BiggMarket.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/BiggMarket.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Famous to some, infamous to others, there's a lot of clubs along here. 
@@ -324,7 +324,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/grainger_street.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/grainger_street.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The fastest route between the station and Monument. Leaving Bigg Market, here's a 24hr McDonalds near Bigg Market, ideal for a late night. 
@@ -343,7 +343,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/newcastlecastle.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/newcastlecastle.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>One of the biggest and best parts of Newcastle's nightlife - Flares, Soho, Mono, Revolution and many others. Connecting to Bigg Market,
@@ -364,7 +364,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/bridges.jpg" className={styles.poiImage} alt="" />
+            <img src="https://www.michaeldono.com/jpg/bridges.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Quayside around the bridges across the Tyne are now a thriving, cosmopolitan area with bars, restaurants and public spaces.</span>
