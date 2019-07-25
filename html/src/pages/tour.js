@@ -143,6 +143,7 @@ const Tour = () => (
         <meta name="theme-color" content="#202e5f" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <meta name="description" content="Personal website for Michael Dono, a Stage 2 Computer Science student at Newcastle"></meta>
         <title>Michael Dono | Newcastle Tour</title>
     </Helmet>
   <Row>
