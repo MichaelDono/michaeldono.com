@@ -301,7 +301,7 @@ function initMap() {
     {url:"png/poi6.png", scaledSize:new google.maps.Size(18,18)},
     {url:"png/poi7.png", scaledSize:new google.maps.Size(18,18)},
     {url:"png/poi8.png", scaledSize:new google.maps.Size(18,18)},
-    {url:"png/poi9.png", scaledSize:new google.maps.Size(18,18)}];
+    {url:"png/poi9.png", scaledSize:new google.maps.Size(18,18)},];
 
     var centralStation = new google.maps.Marker({
         position: {lat: 54.968492, lng: -1.617075},
