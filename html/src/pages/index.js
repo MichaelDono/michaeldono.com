@@ -1,4 +1,5 @@
 import React from "react"
+import {Helmet} from "react-helmet";
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -13,6 +14,11 @@ import '../components/fonts.css'
 
 const IndexPage = () => (
   <Container fluid="true" className={containerStyles.container}>
+    <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content="#202e5f" />
+          <title>Michael Dono</title>
+    </Helmet>
     <Row className={styles.row}>
       <NavBar />
       <Col lg="9" xl="10" className={styles.contentContainer}>

@@ -1,4 +1,5 @@
 import React from "react"
+import {Helmet} from "react-helmet";
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -137,6 +138,11 @@ const markers = [
 
 const Tour = () => (
   <Container fluid="true" className={containerStyles.container}>
+    <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content="#202e5f" />
+          <title>Michael Dono | Newcastle Tour</title>
+    </Helmet>
   <Row>
     <NavBar />
     <Col lg="9" xl="10" className={styles.container}>
