@@ -115,21 +115,6 @@ export class MapContainer extends Component {
             originalBounds: new props.google.maps.LatLngBounds(
                 {lat: 54.960907, lng: -1.625812},
                 {lat: 54.983063, lng: -1.604593}),
-            originIcon: {
-                url:"https://www.michaeldono.com/mentors/tour/png/origin.png", 
-                scaledSize:new props.google.maps.Size(18,18)
-            },
-            pointsOfInterest: [
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi1.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi2.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi3.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi4.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi5.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi6.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi7.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi8.png", scaledSize:new props.google.maps.Size(18,18)},
-                {url:"https://www.michaeldono.com/mentors/tour/png/poi9.png", scaledSize:new props.google.maps.Size(18,18)
-            }],
             activeMarker: {},
             infoVisibility: 0
         }
@@ -228,7 +213,6 @@ export class MapContainer extends Component {
             mapTypeControl={false}
             streetViewControl={false}
             gestureHandling="greedy"
-            // zoomControl={false}
             styles={[
                 {
                     "featureType": "administrative.locality",
