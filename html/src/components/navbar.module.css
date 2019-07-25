@@ -6,9 +6,15 @@
     box-shadow: 0.2em 0 0.9em #1b13636e;
 }
 
-.header, .header:visited {
+.header {
+    margin-right: 56px;
+    font-size: 1.75em;
     color: #fff;
     display: block;
+}
+
+.header:visited {
+    color: #fff;
     text-decoration: none;
 }
 
@@ -32,6 +38,7 @@
         user-select: none;
         padding-bottom: 0.5em;
         text-shadow: 0.02em 0.02em 0.1em #8f89b9;
+        margin-right: 0;
     }
 
     .divider {

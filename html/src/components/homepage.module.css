@@ -10,6 +10,10 @@
     padding-left: 0;
 }
 
+.header {
+    margin-top: 0.3em;
+}
+
 .row {
     height: 100%;
 }
@@ -34,6 +38,7 @@
     }
 
     .header {
+        margin-top: 0;
         font-size: 8em;
     }
 
