@@ -141,25 +141,33 @@ const Tour = () => (
     <NavBar />
     <Col lg="9" xl="10" className={styles.container}>
       <h1>Newcastle Quayside Tour</h1>
-      <MapContainer markers={markers} waypoints={waypoints}/>       
+      <MapContainer markers={markers} waypoints={waypoints}/>
+      
+      <Row>
+        <Row>
+            <Col><h2>Newcastle Helix</h2></Col>
+        </Row>
+          <Col lg="7">
+            <img src="jpg/tyne_brewery.jpg" className={styles.poiImage} />
+          </Col>
+          <Col lg="5">
+            <span>The USB is part of the Helix site. This area of Newcastle has a long history. The entire site used to be used to brew Newcastle Brown Ale, and before that it was a coal mine.
+                Tyne Brewery closed in 2005, after which the area has changed drastically.</span>
+            <span>This photo shows the former bottling plant (now The Core, opposite the People's Kitchen). The Core opened in 2014, the first part of what was then Science Central.
+                The Key opened in 2016 just behind it. The Urban Sciences Building opened in 2017, and The Biosphere is opening this month.</span>
+          </Col>
+      </Row>    
       <div className={styles.content}>
         <div id="poiContainer">
           <div className="poiRow">
             <div className="poiTitle">
                 <div className="poiModal rounded-circle"><span>0</span></div>
-                <h2>Newcastle Helix</h2>
+                
             </div>
             <div className="poiEntry">
-                <img src="jpg/tyne_brewery.jpg" className={styles.poiImage} />
+                
                 <div className="poiText">
-                    <span>
-                        The USB is part of the Helix site. This area of Newcastle has a long history. The entire site used to be used to brew Newcastle Brown Ale, and before that it was a coal mine.
-                        Tyne Brewery closed in 2005, after which the area has changed drastically.
-                    </span>
-                    <span>
-                        This photo shows the former bottling plant (now The Core, opposite the People's Kitchen). The Core opened in 2014, the first part of what was then Science Central.
-                        The Key opened in 2016 just behind it. The Urban Sciences Building opened in 2017, and The Biosphere is opening this month.
-                    </span>
+                    
                 </div>
             </div>
             <div className="poiEntry">
