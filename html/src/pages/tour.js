@@ -141,18 +141,18 @@ const Tour = () => (
     <NavBar />
     <Col lg="9" xl="10" className={styles.container}>
       <h1>Newcastle Quayside Tour</h1>
-      <MapContainer markers={markers} waypoints={waypoints}/>
+      <MapContainer markers={markers} waypoints={waypoints} />
       
-      <Row className={styles.content}>
+      <Row className={styles.contentFirst}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>0</span></div>
-                <h2>Newcastle Helix</h2>
+                <div className={styles.waypointIcon}><span>0</span></div>
+                <h2 className={styles.waypointName}>Newcastle Helix</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/tyne_brewery.jpg" className={styles.poiImage} />
+            <img src="jpg/tyne_brewery.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The USB is part of the Helix site. This area of Newcastle has a long history. The entire site used to be used to brew Newcastle Brown Ale, and before that it was a coal mine.
@@ -165,7 +165,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/sandman.jpg" className={styles.poiImage} />
+            <img src="jpg/sandman.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Learning and Teaching Centre opens Autumn 2019, providing more teaching spaces for the Computing and Business Schools. The Lumen, The Spark and National Innovation Centres
@@ -178,7 +178,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/helix.jpg" className={styles.poiImage} />
+            <img src="jpg/helix.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
           <span>The Helix site is a sustainable urban development - open, green space for education, research and living. Almost all buildings have gardens on their roofs 
@@ -190,13 +190,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>1</span></div>
-                <h2>Chinatown</h2>
+                <div className={styles.waypointIcon}><span>1</span></div>
+                <h2 className={styles.waypointName}>Chinatown</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/chinatown1.jpg" className={styles.poiImage} />
+            <img src="jpg/chinatown1.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Newcastle is one of only 5 cities in the UK to have a Chinatown. The first Chinese restaurant in Newcastle opened in 1949. The Chinese community in Tyne and Wear rapidly grew in the 1960s,
@@ -210,13 +210,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>2</span></div>
-                <h2>The Gate</h2>
+                <div className={styles.waypointIcon}><span>2</span></div>
+                <h2 className={styles.waypointName}>The Gate</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/TheGate.jpg" className={styles.poiImage} />
+            <img src="jpg/TheGate.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Many restaurants (including an around-the-world buffet), nightclubs, casino and cinema. 
@@ -228,13 +228,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>3</span></div>
-                <h2>Grainger Market</h2>
+                <div className={styles.waypointIcon}><span>3</span></div>
+                <h2 className={styles.waypointName}>Grainger Market</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/GraingerMarket.jpg" className={styles.poiImage} />
+            <img src="jpg/GraingerMarket.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Lots of food and ingredients on sale here - meats, fish, fruit and veg, sauces. Great pizza by the slice here as well! 
@@ -247,13 +247,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>4</span></div>
-                <h2>Grey's Monument</h2>
+                <div className={styles.waypointIcon}><span>4</span></div>
+                <h2 className={styles.waypointName}>Grey's Monument</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/greys-monument.jpg" className={styles.poiImage} />
+            <img src="jpg/greys-monument.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The monument was built in 1838 to celebrate the Great Reform Act of 1832.
@@ -271,11 +271,11 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/earl-grey.jpg" className={styles.poiImage} />
+            <img src="jpg/earl-grey.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>You can get tours of the Monument, where you climb the spiral staircase inside - 
-                        the view is fantastic, and a great (if windy) unique selfie opportunity 😜. Check NUSU's Give it a Go for more details.</span>
+                        the view is fantastic, and a great (if windy) unique selfie opportunity. Check NUSU's Give it a Go for more details.</span>
             <span>One of the two streets heading south from Monument is Grey Street - the quickest way to get to the Quayside from Monument.</span>
           </Col>
         </Row>
@@ -283,7 +283,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="jpg/grey_street.jpg" className={styles.poiImage} />
+            <img src="jpg/grey_street.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Theatre Royal is the standout feature and shows ballets, contemporary dance, drama, musicals and opera. 
@@ -298,13 +298,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>5</span></div>
-                <h2>Bigg Market</h2>
+                <div className={styles.waypointIcon}><span>5</span></div>
+                <h2 className={styles.waypointName}>Bigg Market</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/BiggMarket.jpg" className={styles.poiImage} />
+            <img src="jpg/BiggMarket.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>Famous to some, infamous to others, there's a lot of clubs along here. 
@@ -318,13 +318,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>6</span></div>
-                <h2>Grainger Street</h2>
+                <div className={styles.waypointIcon}><span>6</span></div>
+                <h2 className={styles.waypointName}>Grainger Street</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/grainger_street.jpg" className={styles.poiImage} />
+            <img src="jpg/grainger_street.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The fastest route between the station and Monument. Leaving Bigg Market, here's a 24hr McDonalds near Bigg Market, ideal for a late night. 
@@ -337,13 +337,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>7</span></div>
-                <h2>St Nicholas Square</h2>
+                <div className={styles.waypointIcon}><span>7</span></div>
+                <h2 className={styles.waypointName}>St Nicholas Square</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/newcastlecastle.jpg" className={styles.poiImage} />
+            <img src="jpg/newcastlecastle.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>One of the biggest and best parts of Newcastle's nightlife - Flares, Soho, Mono, Revolution and many others. Connecting to Bigg Market,
@@ -358,13 +358,13 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
             <Col>
-                <div className="poiModal rounded-circle"><span>8</span></div>
-                <h2>Swing Bridge</h2>
+                <div className={styles.waypointIcon}><span>8</span></div>
+                <h2 className={styles.waypointName}>Swing Bridge</h2>
             </Col>
         </Row>
         <Row>
           <Col xl="7">
-            <img src="jpg/bridges.jpg" className={styles.poiImage} />
+            <img src="jpg/bridges.jpg" className={styles.poiImage} alt="" />
           </Col>
           <Col xl="5">
             <span>The Quayside around the bridges across the Tyne are now a thriving, cosmopolitan area with bars, restaurants and public spaces.</span>
