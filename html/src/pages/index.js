@@ -28,7 +28,7 @@ const IndexPage = () => (
         <div>
           <h1 className={styles.header}>Michael Dono</h1>
           <ul>
-            <li>Computer Science Undergraduate at Newcastle University.</li>
+            <li>Computer Science Undergraduate at Newcastle.</li>
             <li>Intelligent Infrastucture at Network Rail.</li>
             <li>Former Child.</li>
           </ul>
