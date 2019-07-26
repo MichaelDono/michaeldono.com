@@ -1,5 +1,7 @@
 import React from "react"
 import {Helmet} from "react-helmet";
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -136,7 +138,116 @@ const markers = [
     },
   ];
 
-const Tour = () => (
+export const query = graphql`
+query {
+  
+  tyneBrewery: file(relativePath: { eq: "tyne_brewery.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
+  sandman: file(relativePath: { eq: "sandman.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  helix: file(relativePath: { eq: "helix.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  chinatown: file(relativePath: { eq: "chinatown1.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  gate: file(relativePath: { eq: "TheGate.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  graingerMarket: file(relativePath: { eq: "GraingerMarket.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  monument: file(relativePath: { eq: "greys-monument.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  earlGrey: file(relativePath: { eq: "earl-grey.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  greyStreet: file(relativePath: { eq: "grey_street.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  biggMarket: file(relativePath: { eq: "BiggMarket.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  graingerStreet: file(relativePath: { eq: "grainger_street.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  
+  newcastleCastle: file(relativePath: { eq: "newcastlecastle.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
+  bridges: file(relativePath: { eq: "bridges.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000, quality:100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
+
+export default ({ data }) => (
   <Container fluid="true" className={containerStyles.container}>
     <Helmet>
         <meta charSet="utf-8" />
@@ -161,7 +272,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/tyne_brewery.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.tyneBrewery.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The USB is part of the Helix site. This area of Newcastle has a long history. The entire site used to be used to brew Newcastle Brown Ale, and before that it was a coal mine.
@@ -174,7 +285,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/sandman.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.sandman.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The Learning and Teaching Centre opens Autumn 2019, providing more teaching spaces for the Computing and Business Schools. The Lumen, The Spark and National Innovation Centres
@@ -187,7 +298,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/helix.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.helix.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
           <span>The Helix site is a sustainable urban development - open, green space for education, research and living. Almost all buildings have gardens on their roofs 
@@ -205,7 +316,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/chinatown1.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.chinatown.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>Newcastle is one of only 5 cities in the UK to have a Chinatown. The first Chinese restaurant in Newcastle opened in 1949. The Chinese community in Tyne and Wear rapidly grew in the 1960s,
@@ -225,7 +336,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/TheGate.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.gate.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>Many restaurants (including an around-the-world buffet), nightclubs, casino and cinema. 
@@ -243,7 +354,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/GraingerMarket.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.graingerMarket.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>Lots of food and ingredients on sale here - meats, fish, fruit and veg, sauces. Great pizza by the slice here as well! 
@@ -262,7 +373,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/greys-monument.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.monument.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The monument was built in 1838 to celebrate the Great Reform Act of 1832.
@@ -280,7 +391,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/earl-grey.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.earlGrey.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>You can get tours of the Monument, where you climb the spiral staircase inside - 
@@ -292,7 +403,7 @@ const Tour = () => (
       <Row className={styles.content}>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/grey_street.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.greyStreet.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The Theatre Royal is the standout feature and shows ballets, contemporary dance, drama, musicals and opera. 
@@ -313,7 +424,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/BiggMarket.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.biggMarket.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>Famous to some, infamous to others, there's a lot of clubs along here. 
@@ -333,7 +444,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/grainger_street.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.graingerStreet.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The fastest route between the station and Monument. Leaving Bigg Market, here's a 24hr McDonalds near Bigg Market, ideal for a late night. 
@@ -352,7 +463,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/newcastlecastle.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.newcastleCastle.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>One of the biggest and best parts of Newcastle's nightlife - Flares, Soho, Mono, Revolution and many others. Connecting to Bigg Market,
@@ -373,7 +484,7 @@ const Tour = () => (
         </Row>
         <Row>
           <Col xl="7">
-            <img src="https://www.michaeldono.com/jpg/bridges.jpg" className={styles.poiImage} alt="" />
+            <Img fluid={data.bridges.childImageSharp.fluid} className={styles.poiImage}  />
           </Col>
           <Col xl="5">
             <span>The Quayside around the bridges across the Tyne are now a thriving, cosmopolitan area with bars, restaurants and public spaces.</span>
@@ -400,4 +511,3 @@ const Tour = () => (
 </Container>
 )
 
-export default Tour
