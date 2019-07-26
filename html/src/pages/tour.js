@@ -144,7 +144,7 @@ query {
   tyneBrewery: file(relativePath: { eq: "tyne_brewery.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -152,7 +152,7 @@ query {
   sandman: file(relativePath: { eq: "sandman.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -160,7 +160,7 @@ query {
   helix: file(relativePath: { eq: "helix.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -168,7 +168,7 @@ query {
   chinatown: file(relativePath: { eq: "chinatown1.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -176,7 +176,7 @@ query {
   gate: file(relativePath: { eq: "TheGate.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -184,7 +184,7 @@ query {
   graingerMarket: file(relativePath: { eq: "GraingerMarket.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -192,7 +192,7 @@ query {
   monument: file(relativePath: { eq: "greys-monument.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -200,7 +200,7 @@ query {
   earlGrey: file(relativePath: { eq: "earl-grey.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -208,7 +208,7 @@ query {
   greyStreet: file(relativePath: { eq: "grey_street.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -216,7 +216,7 @@ query {
   biggMarket: file(relativePath: { eq: "BiggMarket.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -224,7 +224,7 @@ query {
   graingerStreet: file(relativePath: { eq: "grainger_street.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -232,7 +232,7 @@ query {
   newcastleCastle: file(relativePath: { eq: "newcastlecastle.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -240,7 +240,7 @@ query {
   bridges: file(relativePath: { eq: "bridges.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid
       }
     }
   }
