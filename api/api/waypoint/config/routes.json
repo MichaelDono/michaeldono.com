@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/waypoints",
+      "handler": "Waypoint.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/waypoints/count",
+      "handler": "Waypoint.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/waypoints/:_id",
+      "handler": "Waypoint.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/waypoints",
+      "handler": "Waypoint.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/waypoints/:_id",
+      "handler": "Waypoint.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/waypoints/:_id",
+      "handler": "Waypoint.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
