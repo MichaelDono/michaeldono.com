@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "waypoint",
   "info": {
     "name": "waypoint",
     "description": "A description for a waypoint on the Newcastle Tour"
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -18,9 +21,14 @@
       "type": "text"
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "plugin": "upload",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "unique": true,
       "required": true
     }
   }

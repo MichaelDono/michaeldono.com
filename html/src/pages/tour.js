@@ -138,114 +138,6 @@ const markers = [
     },
   ];
 
-export const query = graphql`
-query {
-  
-  tyneBrewery: file(relativePath: { eq: "tyne_brewery.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-
-  sandman: file(relativePath: { eq: "sandman.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  helix: file(relativePath: { eq: "helix.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  chinatown: file(relativePath: { eq: "chinatown1.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  gate: file(relativePath: { eq: "TheGate.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  graingerMarket: file(relativePath: { eq: "GraingerMarket.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  monument: file(relativePath: { eq: "greys-monument.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  earlGrey: file(relativePath: { eq: "earl-grey.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  greyStreet: file(relativePath: { eq: "grey_street.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  biggMarket: file(relativePath: { eq: "BiggMarket.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  graingerStreet: file(relativePath: { eq: "grainger_street.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  
-  newcastleCastle: file(relativePath: { eq: "newcastlecastle.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-
-  bridges: file(relativePath: { eq: "bridges.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 2000, quality:100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}
-`
 
 export default ({ data }) => (
   <Container fluid="true" className={containerStyles.container}>
@@ -262,7 +154,27 @@ export default ({ data }) => (
     <Col lg="9" xl="10" className={styles.container}>
       <h1>Newcastle Quayside Tour</h1>
       <MapContainer markers={markers} waypoints={waypoints} />
-      
+            
+      {data.allStrapiWaypoint.nodes.map(node => (
+        <>
+         <Row className={styles.content}>
+          <Col>
+            <div className={styles.waypointIcon}><span>{node.number}</span></div>
+            <h2 className={styles.waypointName}>{node.name}</h2>
+          </Col>
+        </Row>
+        <Row className={styles.content}>
+          <Col xl="7">
+          <Img fluid={node.image.childImageSharp.fluid} className={styles.poiImage} />
+          </Col>
+          <Col xl="5">
+            <span>{node.content}</span>
+          </Col>
+        </Row>
+        </>
+       
+      ))}
+{/* 
       <Row className={styles.contentFirst}>
         <Row>
             <Col>
@@ -305,192 +217,8 @@ export default ({ data }) => (
                 (The USB has the meadow and terrace). Work will soon be starting on Smart Homes that can be remotely controlled via public WiFi on the entire site.</span>
           </Col>
         </Row>
-      </Row>
+      </Row> */}
 
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>1</span></div>
-                <h2 className={styles.waypointName}>Chinatown</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.chinatown.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>Newcastle is one of only 5 cities in the UK to have a Chinatown. The first Chinese restaurant in Newcastle opened in 1949. The Chinese community in Tyne and Wear rapidly grew in the 1960s,
-                though the first Chinese business didn't move to Stowell Street until 1978. Many others followed suit, and in 1988 the street signs became bilingual - by which point the area had become
-                one of the most characterful and distinct in Newcastle. The Chinese Arch was built in 2004 on St Andrew's Street and stands 11 metres tall, costing £475,000.</span><br/>
-            <span>Chinatown is a good shortcut to The Gate, Bigg Market, and Central station. Of course, there's many takeaways and restaurants here, as well as Chinese supermarkets.</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>2</span></div>
-                <h2 className={styles.waypointName}>The Gate</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.gate.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>Many restaurants (including an around-the-world buffet), nightclubs, casino and cinema. 
-                100m or so from Space Golf and a gym. Debenhams is an entrance to Eldon Square - there's also stairs and a lift to it near the Premier Inn.</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>3</span></div>
-                <h2 className={styles.waypointName}>Grainger Market</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.graingerMarket.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>Lots of food and ingredients on sale here - meats, fish, fruit and veg, sauces. Great pizza by the slice here as well! 
-                Also near here is a Tesco Metro, Poundland, Grey's Quarter inside Eldon Square, and escalators up to Eldon Square. 
-                Grainger Games (though now defunct) started here.</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>4</span></div>
-                <h2 className={styles.waypointName}>Grey's Monument</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.monument.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>The monument was built in 1838 to celebrate the Great Reform Act of 1832.
-                        The act was wrote by the Prime Minister Earl Grey (the one the tea is named after) from Northumberland.
-                        It increased the electorate to 650,000 from 400,000 - starting the ball rolling on the UK becoming truly democratic. 
-                        All men 21 and over got the right to vote in 1918, and ten years later women. 18 year-olds could only vote after 1969! 
-                        This area has changed a lot over the years
-                        - it used to be a busy roundabout (you can see the supports that were installed inside the monument for the trams that once ran all over Newcastle).</span><br/>
-            <span>Monument is the de facto centre of Newcastle, with Monument Metro station below, the main entrance to Grey's Quarter, many bus services, 
-                        and the head of Grey Street and Grainger Street - you can see the Monument along them 
-                        (including along Grainger Street as you walk out of Central Station), ideal for knowing where you are.</span>
-          </Col>
-        </Row>
-      </Row>
-      <Row className={styles.content}>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.earlGrey.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>You can get tours of the Monument, where you climb the spiral staircase inside - 
-                        the view is fantastic, and a great (if windy) unique selfie opportunity. Check NUSU's Give it a Go for more details.</span><br/>
-            <span>One of the two streets heading south from Monument is Grey Street - the quickest way to get to the Quayside from Monument.</span>
-          </Col>
-        </Row>
-      </Row>
-      <Row className={styles.content}>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.greyStreet.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>The Theatre Royal is the standout feature and shows ballets, contemporary dance, drama, musicals and opera. 
-                      Also just off Grey Street is Tyneside Cinema - Newcastle's only independent cultral cinema, 
-                      screening independent and world cinema as well as the usual films on offer at other cinemas.</span><br/>
-            <span>To get to the Quayside from here just keep walking straight on, and continue south along Dean Street. Grey street connects onto High Bridge - 
-                      where there's bars, pubs and a comedy club. It's easy to not know it exists!</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>5</span></div>
-                <h2 className={styles.waypointName}>Bigg Market</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.biggMarket.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>Famous to some, infamous to others, there's a lot of clubs along here. 
-                        There's a lot of redevelopment planned here, so in the coming years it will be looking much more attractive and charming.
-                        The name comes from being a busy marketplace for "Bigg", a type of barley. 
-                        It used to be part of the main road from London to Edinburgh!</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>6</span></div>
-                <h2 className={styles.waypointName}>Grainger Street</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.graingerStreet.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>The fastest route between the station and Monument. Leaving Bigg Market, here's a 24hr McDonalds near Bigg Market, ideal for a late night. 
-                      Moving south towards the station, there's good nerdy and geeky shops - Forbidden Planet, Geek Retreat and the newly opened Be More Geek.</span><br/>
-            <span>At the Central station end there is a huge Wetherspoons and a church built in 1287 - one of the oldest buildings in Newcastle.</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>7</span></div>
-                <h2 className={styles.waypointName}>St Nicholas Square</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.newcastleCastle.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>One of the biggest and best parts of Newcastle's nightlife - Flares, Soho, Mono, Revolution and many others. Connecting to Bigg Market,
-                        this somewhere you'll see a lot of on any night out.</span><br/>
-            <span>This is a very historic part of Newcastle. The Civic Centre used to be here, and Hadrian's Wall ran mere metres away from here along Westgate Road. </span>
-            <span>The Cathedral Church of St Nicholas made Newcastle became a city in 1882. Newcastle Castle stands on St Nicholas Street, 
-                        just south of the railway to Edinburgh.</span>
-          </Col>
-        </Row>
-      </Row>
-
-      <Row className={styles.content}>
-        <Row>
-            <Col>
-                <div className={styles.waypointIcon}><span>8</span></div>
-                <h2 className={styles.waypointName}>Swing Bridge</h2>
-            </Col>
-        </Row>
-        <Row>
-          <Col xl="7">
-            <Img fluid={data.bridges.childImageSharp.fluid} className={styles.poiImage}  />
-          </Col>
-          <Col xl="5">
-            <span>The Quayside around the bridges across the Tyne are now a thriving, cosmopolitan area with bars, restaurants and public spaces.</span>
-          </Col>
-        </Row>
-      </Row>
       <div className={styles.tourDescription}>
         <span>
             This tour for Stage 1 Computer Science students helps you explore Newcastle
@@ -511,3 +239,24 @@ export default ({ data }) => (
 </Container>
 )
 
+
+export const pageQuery = graphql`
+query IndexQuery {
+  allStrapiWaypoint {
+    nodes {
+      content
+      name
+      }
+      image {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      number
+      id
+    }
+  }
+}
+`
