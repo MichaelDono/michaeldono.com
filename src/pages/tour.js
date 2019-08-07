@@ -154,7 +154,7 @@ export default ({ data }) => (
     <Col lg="9" xl="10" className={styles.container}>
       <h1>Newcastle Quayside Tour</h1>
       <MapContainer markers={markers} waypoints={waypoints} />
-            
+{/*             
       {data.allStrapiWaypoint.nodes.map(node => (
         <>
          <Row className={styles.content}>
@@ -173,7 +173,7 @@ export default ({ data }) => (
         </Row>
         </>
        
-      ))}
+      ))} */}
 {/* 
       <Row className={styles.contentFirst}>
         <Row>
@@ -240,23 +240,23 @@ export default ({ data }) => (
 )
 
 
-export const pageQuery = graphql`
-query IndexQuery {
-  allStrapiWaypoint {
-    nodes {
-      content
-      name
-      }
-      image {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      number
-      id
-    }
-  }
-}
-`
+// export const pageQuery = graphql`
+// query IndexQuery {
+//   allStrapiWaypoint {
+//     nodes {
+//       content
+//       name
+//       }
+//       image {
+//         childImageSharp {
+//           fluid(maxWidth: 2000) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//       number
+//       id
+//     }
+//   }
+// }
+// `
