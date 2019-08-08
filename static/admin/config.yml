@@ -6,12 +6,12 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "news"
-    label: "News"
-    folder: "src/pages/news"
+  - name: "tour"
+    label: "Tour Entry"
+    folder: "src/pages/tour"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Location", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
