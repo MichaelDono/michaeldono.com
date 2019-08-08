@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: api-update # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "tour"
@@ -12,6 +12,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Location", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
