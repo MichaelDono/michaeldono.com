@@ -1,0 +1,82 @@
+.map {
+    
+}
+
+.container {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.transit {
+
+}
+
+.transit > h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: 'Raleway', monospace;
+}
+
+.transit > h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.transit > h2 > img {
+    max-height: 1.2rem;
+    max-width: 1.2rem;
+    margin-bottom: 0.25rem;
+    margin-right: 0.5rem;
+}
+
+.midSection {
+    border-bottom: 0.08em solid #c4c4c4;
+    padding-bottom: 0.33em;
+    margin-bottom: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.midSection > div, .tocs > div {
+    font-size: 1.2em;
+    padding: 0.25em;
+    font-family: 'Raleway', monospace;
+    margin: 0 0.2em;
+    color: #FFFFFF;
+    border-radius: 0.25em;
+}
+
+.tocs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tocs p, .midSection p {
+    margin-bottom: 0;
+}
+
+.lner {
+    background-color: #ce0e2d;
+}
+
+.tpe {
+    background-color: #00A6E6;
+}
+
+.xc {
+    background-color: #880e4f;
+}
+
+.northern {
+    background-color: #262262;
+}
+
+.green {
+    background-color: #2fb456;
+}
+
+.tocs .yellow {
+    background-color: #faa63a;
+    color: #000000;
+}

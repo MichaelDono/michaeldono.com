@@ -1,0 +1,83 @@
+.container {
+    padding: 1em;
+}
+
+.container > h1 {
+    color: #FFFFFF;
+    user-select: none;
+}
+
+.content, .contentFirst {
+    background-color: #f2f1f0;
+    color: #16161d;
+    margin: 0;
+}
+
+.contentFirst {
+    padding-top: 1em;
+}
+
+.container > h1 {
+    font-family: 'Raleway', monospace;
+    font-size: 4em;
+    line-height: 1.05em;
+}
+
+.poiImage {
+    box-shadow: 0.1em 0.1em 0.9em #1b13636e;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.content > div, .contentFirst > div, .content > div > div, .contentFirst > div > div {
+    margin: 0;
+}
+
+.waypointIcon {
+    background-color: #ff0000;
+    color: #FFFFFF;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    font-size: 2em;
+    text-align: center;
+    margin-right: 0.3em;
+    border-radius: 50% !important;
+    vertical-align: middle;
+}
+
+.waypointIcon > span {
+    bottom: 0.3em;
+    height: 1em;
+    width: 1em;
+    position: relative;
+    font-family: 'Roboto Slab', monospace;
+    user-select: none;
+}
+
+.waypointName {
+    display: inline;
+    vertical-align: middle;
+}
+
+.tourDescription {
+    margin: 1em;
+    color: #FFFFFF;
+}
+
+.tourDescription > a {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 2em 4em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 2em 10em;
+    }
+}
