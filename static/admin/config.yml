@@ -1,5 +1,8 @@
 backend:
   name: git-gateway
+  repo: "MichaelDono/michaeldono.com"
+
+site_url: "https://michaeldono.netlify.com"
 
 media_folder: "static/img"
 public_folder: "/img"
