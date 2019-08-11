@@ -1,11 +1,12 @@
 backend:
   name: git-gateway
   repo: "MichaelDono/michaeldono.com"
+  squash_merges: true
 
 site_url: "https://michaeldono.netlify.com"
 
 media_folder: "static/img"
-public_folder: "/img"
+public_folder: "img"
 
 collections:
   - name: "tour"
