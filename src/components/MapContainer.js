@@ -364,7 +364,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(1)}>
                 <div className={styles.transit}>
                     <h1>Gateshead Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.green}><p>Green Line</p></div>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
@@ -376,7 +376,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(2)}>
                 <div className={styles.transit}>
                     <h1>Central Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/rail.png" alt=""/>National Rail</h2>
+                    <h2><img src="https://www.michaeldono.com/img/rail.png" alt=""/>National Rail</h2>
                     <div className={styles.midSection}>
                         <div className={styles.lner}>
                             <p>LNER</p>
@@ -391,7 +391,7 @@ export class MapContainer extends Component {
                             <p>Northern</p>
                         </div>
                     </div>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.green}><p>Green Line</p></div>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
@@ -403,7 +403,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(3)}>
                 <div className={styles.transit}>
                     <h1>Monument Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.green}><p>Green Line</p></div>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
@@ -415,7 +415,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(4)}>
                 <div className={styles.transit}>
                     <h1>Haymarket Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.green}><p>Green Line</p></div>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
@@ -427,7 +427,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(5)}>
                 <div className={styles.transit}>
                     <h1>St James Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
                     </div>
@@ -438,7 +438,7 @@ export class MapContainer extends Component {
                 visible={this.isInfoVisible(6)}>
                 <div className={styles.transit}>
                     <h1>Manors Station</h1>
-                    <h2><img src="https://www.michaeldono.com/img/png/metro.png" alt=""/>Metro</h2>
+                    <h2><img src="https://www.michaeldono.com/img/metro.png" alt=""/>Metro</h2>
                     <div className={styles.tocs}>
                         <div className={styles.yellow}><p>Yellow Line</p></div>
                     </div>

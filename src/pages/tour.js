@@ -17,70 +17,70 @@ import '../components/fonts.css'
 const waypoints = [
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/origin.png", 
+            url:"https://www.michaeldono.com/img/origin.png", 
             size:[18,18]
         },
         position: {lat: 54.973513, lng: -1.625076}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi1.png", 
+            url:"https://www.michaeldono.com/img/poi1.png", 
             size:[18,18]
         },
         position: {lat: 54.973536, lng: -1.619654}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi2.png", 
+            url:"https://www.michaeldono.com/img/poi2.png", 
             size:[18,18]
         },
         position: {lat: 54.972544, lng: -1.617475}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi3.png", 
+            url:"https://www.michaeldono.com/img/poi3.png", 
             size:[18,18]
         },
         position: {lat: 54.972810, lng: -1.615378}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi4.png", 
+            url:"https://www.michaeldono.com/img/poi4.png", 
             size:[18,18]
         },
         position: {lat: 54.972680, lng: -1.612442}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi5.png", 
+            url:"https://www.michaeldono.com/img/poi5.png", 
             size:[18,18]
         },
         position: {lat: 54.971232, lng: -1.614465}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi6.png", 
+            url:"https://www.michaeldono.com/img/poi6.png", 
             size:[18,18]
         },
         position: {lat: 54.970867, lng: -1.615544}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi7.png", 
+            url:"https://www.michaeldono.com/img/poi7.png", 
             size:[18,18]
         },
         position: {lat: 54.969903, lng: -1.611950}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi8.png", 
+            url:"https://www.michaeldono.com/img/poi8.png", 
             size:[18,18]
         },
         position: {lat: 54.967380, lng: -1.607570}
     },
     {
         icon: {
-            url:"https://www.michaeldono.com/img/png/poi9.png", 
+            url:"https://www.michaeldono.com/img/poi9.png", 
             size:[18,18]
         },
         position: {lat: 54.967395, lng: -1.605491}
@@ -90,7 +90,7 @@ const waypoints = [
 const markers = [
     { // Gateshead
         icon: {
-            url:"https://www.michaeldono.com/img/png/metro.png", 
+            url:"https://www.michaeldono.com/img/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.962207, lng: -1.604320},
@@ -98,7 +98,7 @@ const markers = [
     },
     { // Central Station
         icon: {
-            url:"https://www.michaeldono.com/img/png/rail_metro.png", 
+            url:"https://www.michaeldono.com/img/rail_metro.png", 
             size:[43,16]
         },
         position: {lat: 54.968492, lng: -1.617075},
@@ -106,7 +106,7 @@ const markers = [
     },
     { // Monument
         icon: {
-            url:"https://www.michaeldono.com/img/png/metro.png", 
+            url:"https://www.michaeldono.com/img/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.973847, lng: -1.613261},
@@ -114,7 +114,7 @@ const markers = [
     },
     { // Haymarket
         icon: {
-            url:"https://www.michaeldono.com/img/png/metro.png", 
+            url:"https://www.michaeldono.com/img/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.977481, lng: -1.613876},
@@ -122,7 +122,7 @@ const markers = [
     },
     { // St James
         icon: {
-            url:"https://www.michaeldono.com/img/png/metro.png", 
+            url:"https://www.michaeldono.com/img/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.974343, lng: -1.620630},
@@ -130,7 +130,7 @@ const markers = [
     },
     { // Manors
         icon: {
-            url:"https://www.michaeldono.com/img/png/metro.png", 
+            url:"https://www.michaeldono.com/img/metro.png", 
             size:[16,16]
         },
         position: {lat: 54.973970, lng: -1.604811},
