@@ -29,7 +29,7 @@ const IndexPage = () => (
           <h1 className={styles.header}>Michael Dono</h1>
           <ul>
             <li>Computer Science Undergraduate at Newcastle.</li>
-            <li>Intelligent Infrastucture at Network Rail.</li>
+            <li>IT &amp; Business Year in Industry at Network Rail.</li>
             <li>Former Child.</li>
           </ul>
         </div>
