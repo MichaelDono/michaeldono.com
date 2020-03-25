@@ -6,7 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-netlify-cms'
+    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
   ],
 }

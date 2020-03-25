@@ -1,29 +1,28 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "michaeldono",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael Dono <michael@michaeldono.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gatsby": "^2.15.9",
-    "gatsby-image": "^2.2.17",
-    "gatsby-plugin-netlify-cms": "^4.1.13",
+    "gatsby": "^2.19.45",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-netlify-cms": "^4.2.1",
     "gatsby-plugin-netlify-identity-widget": "^1.1.1",
-    "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-sharp": "^2.2.20",
-    "gatsby-source-filesystem": "^2.1.21",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
     "google-maps-react": "^2.0.2",
     "mem": "^5.1.1",
-    "netlify-cms-app": "^2.9.7",
+    "netlify-cms-app": "^2.11.32",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-bootstrap": "^1.0.0-beta.12",
-    "react-dom": "^16.9.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "keywords": [
     "gatsby"
